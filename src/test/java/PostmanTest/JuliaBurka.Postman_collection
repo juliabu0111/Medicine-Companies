@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "a1fe16e0-5153-4eb6-aa26-493ca675fd38",
+		"name": "JuliaBurka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FIRST_PAGES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "099bd6ca-9add-44bb-ae7d-30a39ea34ce3",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090"
+				},
+				"description": "First pages"
+			},
+			"response": []
+		},
+		{
+			"name": "GREETING",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb9e399f-56bf-4e7b-aa48-d11ed8e219f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GO_AWAY",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b7bd359-c62c-41cd-b500-8efb47f4ceb6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/bye",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"bye"
+					]
+				},
+				"description": "http://localhost:8080/goAway"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_WORKERS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4e93d63a-caf1-4290-955b-8d28a4c0641c",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/worker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"worker"
+					]
+				},
+				"description": "get_All"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_WORKER_BY_ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0d3e8594-c30f-42a4-af0d-2647320cec2c",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/worker/2314",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"worker",
+						"2314"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_WORKER",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0d11be8-d7de-482f-a9fa-46ea11cd9062",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e6ae0d82-1760-4ef3-a361-9dcfa05fcbeb",
+						"exec": [
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"worker_id\":3147,\"w_name\":\"Коберник Іванна Юріївна\",\"w_company\":\"Matilda International\",\"w_position\":\"Офтальмолог\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/worker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"worker"
+					],
+					"query": [
+						{
+							"key": "\"worker_id\"",
+							"value": "3147,",
+							"disabled": true
+						},
+						{
+							"key": "\"w_name\"",
+							"value": "\"Коберник Іванна Юріївна\",",
+							"disabled": true
+						},
+						{
+							"key": "\"w_company\"",
+							"value": "\"Matilda International\",",
+							"disabled": true
+						},
+						{
+							"key": "\"w_position\"",
+							"value": "\"Офтальмолог\"",
+							"disabled": true
+						}
+					]
+				},
+				"description": "create_Workers"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_WORKER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c484ecd3-2dcd-44fc-b367-9f2aff37fe15",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/worker/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"worker",
+						""
+					]
+				},
+				"description": "update_Workers"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_WORKER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52ac22d0-f5ae-4b3f-b543-82e195e51b7f",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/worker/2644",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"worker",
+						"2644"
+					]
+				},
+				"description": "delete_Workers"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
